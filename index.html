@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>ISS Distance Finder</title>
+    <link rel="icon" href="/assets/green-bean-svgrepo-com.svg">
 </head>
 <body onload="getLocation()">
-    
-
-    <div>
-        <h2>
+    <div id="countercon" >
+        <h1>
             DISTANCE TO ISS
-        </h2>
-        <p id="greencounter"></p>
-        <button type="button" onclick="begin()"> Count the greenbeans</button>
+        </h1>
+        <h2 id="greencounter"></h2><img id="greenbeanlogo" src="/assets/green-bean-svgrepo-com.svg" style="width: 3em; height: 3em; display: none;">
+        <h2 id="kmcounter"></h2>
+        <h2 id="milecounter"></h2>
+        <button type="button" onclick="begin()"> Count the greenbeans </button>
     </div>
     <script src="formatter.js"></script>
     <script src="geodesy.js"></script>

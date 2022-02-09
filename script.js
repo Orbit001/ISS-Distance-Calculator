@@ -8,24 +8,24 @@ var USERZ
 var  x,y,z
 var  isx,isy,isz;
 var answer
-const counter = document.getElementById("greencounter")
 
 
 function begin(){
-    ConvertLocation();
-    bangarang();
-    
-    setInterval(ConvertLocation, 2000);
-    setInterval(bangarang, 2000);
+    setInterval(ConvertLocation, 1000);
+    setInterval(bangarang, 1000);
 }
 function distanceequation(){
     answer = (Math.sqrt((x - isx)**2 + (y - isy)**2 + (z - isz)**2));
+    console.log(answer)
     tobeans()
 }
 function tobeans(){
     beans = answer/.0001016
     beansnodecimal = Math.trunc (beans);
     document.getElementById("greencounter").innerHTML = beansnodecimal + " green beans"
+    document.getElementById("kmcounter").innerHTML = Math.trunc (answer) + " kilometers"
+    document.getElementById("milecounter").innerHTML = Math.trunc (answer*0.621371) + " miles"
+    document.getElementById("greenbeanlogo").style.display = "flex";
 }
 function getLocation()
 {
