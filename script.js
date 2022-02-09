@@ -12,8 +12,8 @@ const counter = document.getElementById("greencounter")
 
 
 function begin(){
-    setInterval(ConvertLocation, 1000);
-    setInterval(bangarang, 1000);
+    setInterval(ConvertLocation, 2000);
+    setInterval(bangarang, 2000);
 }
 function distanceequation(){
     answer = (Math.sqrt((x - isx)**2 + (y - isy)**2 + (z - isz)**2));
