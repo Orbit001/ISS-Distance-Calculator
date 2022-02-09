@@ -12,6 +12,9 @@ const counter = document.getElementById("greencounter")
 
 
 function begin(){
+    ConvertLocation();
+    bangarang();
+    
     setInterval(ConvertLocation, 2000);
     setInterval(bangarang, 2000);
 }
