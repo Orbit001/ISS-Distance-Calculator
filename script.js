@@ -27,22 +27,24 @@ const starter = document.getElementById("Starter")
 starter.addEventListener("click", function(){
     document.getElementById("starterbutton").style.display = "none"
     document.getElementById("countercon").style.display = "flex"
-    locationinterval = setInterval(bangarang, 2500);
-    Minterval = setInterval(citylocater, 2500);
+    locationinterval = setInterval(bangarang, 1250);
+    Minterval = setInterval(citylocater, 1250);
     clearInterval(locationinterval)
-    clearInterval(Minterval);
+    clearInterval(Mintervaa);
 })
 
 chimpbutton.addEventListener("click",function(){
+    // document.getElementById("header").innerHTML = "Distance To International Space Station" + "("+ document.getElementById('Cityfetch').value + ")"
     clearInterval(locationinterval)
     clearInterval(Minterval)
-    Minterval = setInterval(citylocater, 2500);
+    Minterval = setInterval(citylocater, 1250);
 });
 
 greenbutton.addEventListener("click",function(){
+    // document.getElementById("header").innerHTML = "Distance To International Space Station" + "(Your Location)"
     clearInterval(Minterval);
     clearInterval(locationinterval);
-    locationinterval = setInterval(bangarang, 2500);
+    locationinterval = setInterval(bangarang, 1250);
 
 });
 
@@ -156,12 +158,6 @@ function distanceequation(){
 function tobeans(){
     beans = answer/.0001016
     beansnodecimal = Math.trunc (beans);
-    CityName = document.getElementById('Cityfetch').value;
-    if (CityName = null){
-        document.getElementById("header").innerHTML = "Distance To International Space Station" + "(Your Location)"
-    }else{
-        document.getElementById("header").innerHTML = "Distance To International Space Station" + "("+ document.getElementById('Cityfetch').value + ")"
-    }
     document.getElementById("greencounter").innerHTML = beansnodecimal + " green beans"
     document.getElementById("kmcounter").innerHTML = Math.trunc (answer) + " kilometers"
     document.getElementById("milecounter").innerHTML = Math.trunc (answer*0.621371) + " miles"
