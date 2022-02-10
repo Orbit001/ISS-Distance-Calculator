@@ -8,12 +8,17 @@ var USERZ
 
 var CITYX
 var CITYY
+
 var  x,y,z
 var  isx,isy,isz;
+
 var answer
+
 var CallCount= 0
+
 let locationinterval
 let Minterval
+
 const chimpbutton = document.getElementById("dad");
 const greenbutton = document.getElementById("greenbeansbutton");
 const starter = document.getElementById("Starter")

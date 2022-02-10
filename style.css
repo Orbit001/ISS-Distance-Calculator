@@ -1,5 +1,5 @@
 body{
-    background-image: url('/assets/ISS.gif');
+    background-image: url('./assets/ISS.gif');
     background-size: cover;
     
     
