@@ -30,7 +30,7 @@ starter.addEventListener("click", function(){
     locationinterval = setInterval(bangarang, 1250);
     Minterval = setInterval(citylocater, 1250);
     clearInterval(locationinterval)
-    clearInterval(Mintervaa);
+    clearInterval(Minterval);
 })
 
 chimpbutton.addEventListener("click",function(){
