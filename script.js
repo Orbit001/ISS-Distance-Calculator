@@ -156,6 +156,12 @@ function distanceequation(){
 function tobeans(){
     beans = answer/.0001016
     beansnodecimal = Math.trunc (beans);
+    CityName = document.getElementById('Cityfetch').value;
+    if (CityName = null){
+        document.getElementById("header").innerHTML = "Distance To International Space Station" + "(Your Location)"
+    }else{
+        document.getElementById("header").innerHTML = "Distance To International Space Station" + "("+ document.getElementById('Cityfetch').value + ")"
+    }
     document.getElementById("greencounter").innerHTML = beansnodecimal + " green beans"
     document.getElementById("kmcounter").innerHTML = Math.trunc (answer) + " kilometers"
     document.getElementById("milecounter").innerHTML = Math.trunc (answer*0.621371) + " miles"
