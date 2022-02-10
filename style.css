@@ -22,3 +22,15 @@ body{
     align-items: center;
     height:100%;
 }
+#greenbeaninline{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#greenbeanlogo{
+    margin-top: .5em;
+    margin-left: 1em;
+    width: 3em;
+    height: 3em; 
+ 
+}
