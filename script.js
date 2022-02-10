@@ -20,9 +20,9 @@ let locationinterval
 let Minterval
 
 const chimpbutton = document.getElementById("dad");
-const greenbutton = document.getElementById("greenbeansbutton");
+const yourlocation = document.getElementById("greenbeansbutton");
 const starter = document.getElementById("Starter")
-
+const title = document.getElementById("header")
 
 starter.addEventListener("click", function(){
     document.getElementById("starterbutton").style.display = "none"
@@ -40,10 +40,11 @@ chimpbutton.addEventListener("click",function(){
     Minterval = setInterval(citylocater, 1250);
 });
 
-greenbutton.addEventListener("click",function(){
-    // document.getElementById("header").innerHTML = "Distance To International Space Station" + "(Your Location)"
+yourlocation.addEventListener("click",function(){
+    document.getElementById("header").innerHTML = "Distance To International Space Station From Your Location"
     clearInterval(Minterval);
     clearInterval(locationinterval);
+    getLocation();
     locationinterval = setInterval(bangarang, 1250);
 
 });
@@ -55,6 +56,7 @@ function citylocater(){
     
     var CityName = document.getElementById('Cityfetch').value;
     console.log(CityName)
+    title.innerHTML= "Distance To Internation Space Station from " + CityName;
     const APIkey = "ab1575ee1ccdc121fcad7be6bd5e5ed5"
     let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + CityName + "&appid=" + APIkey+ "&units=imperial";
 fetch(queryURL)
